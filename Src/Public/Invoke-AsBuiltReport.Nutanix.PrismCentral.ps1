@@ -654,7 +654,7 @@ function Invoke-AsBuiltReport.Nutanix.PrismCentral {
                     #region Users
                     $body = @{'kind'='user';'sort_attribute'='name';'sort_order'='ASCENDING';'length'=10000} | ConvertTo-Json
                     $NtnxLocalUsers = (Invoke-RestMethod -Uri ($api_v3 + '/users/list') -Method POST -Headers $headers -Body $body).entities
-                    if ($NtnxLocalUsers -and ($InfoLevel.Administration.Users -ge 1)) {
+                    if ($NtnxLocalUsers -and ($InfoLevel.Administration.LocalUsers -ge 1)) {
                         Section -Style Heading3 'Local Users' {
                             $NtnxLocalUserInfo = foreach ($NtnxLocalUser in $NtnxLocalUsers) {
                                 [PSCustomObject]@{

@@ -35,7 +35,7 @@
         },
         "Administration": {
             "Roles": 1,
-            "Users": 1
+            "LocalUsers": 1
         }
     },
     "HealthCheck": {

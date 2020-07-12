@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://www.asbuiltreport.com/" alt="AsBuiltReport" target="_blank"> 
+    <a href="https://www.asbuiltreport.com/" alt="AsBuiltReport"> 
             <img src='https://raw.githubusercontent.com/AsBuiltReport/AsBuiltReport/master/AsBuiltReport.png' width="8%" height="8%" /></a>
 </p>
 <p align="center">
@@ -61,57 +61,57 @@ The following provides information of how to configure each schema within the re
 ### Report
 The **Report** schema provides configuration of the Nutanix Prism report information
 
-| Sub-Schema | Description |
-| ---------- | ----------- |
-| Filename | The filename of the As Built Report (Optional)<br>If not specified, the filename will be the same as the report name
-| Name | The name of the As Built Report
-| Version | The report version
-| Status | The report release status
+| Sub-Schema | Description                                                                                                          |
+|------------|----------------------------------------------------------------------------------------------------------------------|
+| Filename   | The filename of the As Built Report (Optional)<br>If not specified, the filename will be the same as the report name |
+| Name       | The name of the As Built Report                                                                                      |
+| Version    | The report version                                                                                                   |
+| Status     | The report release status                                                                                            |
 
 ### Options
 The **Options** schema allows certain options within the report to be toggled on or off
 
-| Sub-Schema | Setting | Default | Description |
-| ---------- | ------- | ------- | ----------- |
-| ShowCoverPageImage | true / false | true | Toggle to enable/disable the display of the cover page image
-| ShowHeaderFooter | true / false | true | Toggle to enable/disable document headers & footers
-| ShowTableCaptions | true / false | true | Toggle to enable/disable table captions/numbering
+| Sub-Schema         | Setting      | Default | Description                                                  |
+|--------------------|--------------|---------|--------------------------------------------------------------|
+| ShowCoverPageImage | true / false | true    | Toggle to enable/disable the display of the cover page image |
+| ShowHeaderFooter   | true / false | true    | Toggle to enable/disable document headers & footers          |
+| ShowTableCaptions  | true / false | true    | Toggle to enable/disable table captions/numbering            |
 
 ### InfoLevel
 The **InfoLevel** schema allows configuration of each section of the report at a granular level. 
 
 There are 3 levels (0-2) of detail granularity for each section as follows;
 
-| Setting | InfoLevel | Description |
-| :-----: | --------- | ----------- |
-| 0 | Disabled | Does not collect or display any information
-| 1 | Enabled / Summary | Provides summarised information for a collection of objects
-| 2 | Detailed | Provides detailed information for a collection of objects
+| Setting | InfoLevel         | Description                                                 |
+|:-------:|-------------------|-------------------------------------------------------------|
+|    0    | Disabled          | Does not collect or display any information                 |
+|    1    | Enabled / Summary | Provides summarised information for a collection of objects |
+|    2    | Detailed          | Provides detailed information for a collection of objects   |
 
 The table below outlines the default and maximum **InfoLevel** settings for each section.
 
-| Sub-Schema | Sub-Schema | Default Setting | Maximum Setting |
-| ---------- | ---------- | :-------------: | :-------------: |
-| PrismCentral 
-| | SystemSettings | 1 | 1
-| | SmtpServer | 1 | 1
-| | SyslogServer | 1 | 1
-| | IdentityProviders | 1 | 1
-| | DirectoryServices | 1 | 1
-| VirtualInfrastructure 
-| | VM | 1 | 2 
-| | Images | 1 | 1
-| | Categories | 1 | 1
-| | Networks | 1 | 1
-| Policies 
-| | NGT | 1 | 1
-| | ImagePlacement | 1 | 1
-| Hardware
-| | Clusters  | 1 | 2
-| | Hosts | 1 | 2
-| Administration
-| | Roles | 1 | 1
-| | Users | 1 | 1
+| Sub-Schema            | Sub-Schema        | Default Setting | Maximum Setting |
+|-----------------------|-------------------|:---------------:|:---------------:|
+| PrismCentral          |                   |                 |                 |
+|                       | SystemSettings    |        1        |        1        |
+|                       | SmtpServer        |        1        |        1        |
+|                       | SyslogServer      |        1        |        1        |
+|                       | IdentityProviders |        1        |        1        |
+|                       | DirectoryServices |        1        |        1        |
+| VirtualInfrastructure |                   |                 |                 |
+|                       | VM                |        1        |        2        |
+|                       | Images            |        1        |        1        |
+|                       | Categories        |        1        |        1        |
+|                       | Networks          |        1        |        1        |
+| Policies              |                   |                 |                 |
+|                       | NGT               |        1        |        1        |
+|                       | ImagePlacement    |        1        |        1        |
+| Hardware              |                   |                 |                 |
+|                       | Clusters          |        1        |        2        |
+|                       | Hosts             |        1        |        2        |
+| Administration        |                   |                 |                 |
+|                       | Roles             |        1        |        1        |
+|                       | LocalUsers        |        1        |        1        |
 
 ### Healthcheck
 The **Healthcheck** schema is used to toggle health checks on or off.
@@ -119,9 +119,9 @@ The **Healthcheck** schema is used to toggle health checks on or off.
 #### VM
 The **VM** schema is used to configure health checks for virtual machines.
 
-| Sub-Schema | Setting | Default | Description | Highlight |
-| ---------- | ------- | ------- | ----------- | --------- |
-| PowerState | true / false | true | Highlights VMs which are powered off | ![Warning](https://placehold.it/15/FFE860/000000?text=+) VM is powered off
+| Sub-Schema | Setting      | Default | Description                          | Highlight                                                                  |
+|------------|--------------|---------|--------------------------------------|----------------------------------------------------------------------------|
+| PowerState | true / false | true    | Highlights VMs which are powered off | ![Warning](https://placehold.it/15/FFE860/000000?text=+) VM is powered off |
 
 ## :computer: Examples 
 
