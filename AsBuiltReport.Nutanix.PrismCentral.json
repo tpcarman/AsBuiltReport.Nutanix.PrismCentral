@@ -1,17 +1,46 @@
 {
     "Report": {
+        "Filename": "",
         "Name": "Nutanix Prism Central As Built Report",
         "Version": "1.0",
         "Status": "Released"
     },
-    "Section": {
-        "_comment_": "0 = Disabled, 1 = Enabled",
-        "Virtual Infrastructure": 1,
-        "Policies": 1,
-        "Hardware": 1,
-        "Administration": 1,
-        "Settings": 1
+    "Options": {
+        "ShowCoverPageImage": true,
+        "ShowHeaderFooter": true,
+        "ShowTableCaptions": true
+    },
+    "InfoLevel": {
+        "_comment_": "0 = Disabled, 1 = Enabled / Summary, 2 = Detailed",
+        "PrismCentral": {
+            "SystemSettings": 1,
+            "SmtpServer": 1,
+            "SyslogServer": 1,
+            "IdentityProviders": 1,
+            "DirectoryServices": 1
+        },
+        "VirtualInfrastructure": {
+            "VM": 1,
+            "Images": 1,
+            "Categories": 1,
+            "Networks": 1
+        },
+        "Policies": {
+            "NGT": 1,
+            "ImagePlacement": 1
+        },
+        "Hardware": {
+            "Clusters": 1,
+            "Hosts": 1
+        },
+        "Administration": {
+            "Roles": 1,
+            "Users": 1
+        }
     },
     "HealthCheck": {
+        "VM": {
+            "PowerState": true 
+        }
     }
 }
