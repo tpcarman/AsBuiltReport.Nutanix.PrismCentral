@@ -62,7 +62,7 @@ The following provides information of how to configure each schema within the re
 The **Report** schema provides configuration of the Nutanix Prism report information
 
 | Sub-Schema | Description |
-| ------ | ---------- | ----------- |
+| ---------- | ----------- |
 | Filename | The filename of the As Built Report (Optional)<br>If not specified, the filename will be the same as the report name
 | Name | The name of the As Built Report
 | Version | The report version
